@@ -12,10 +12,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:build": "docker build -t nginx-docker-demo .",
+    "docker:run": "docker run -itd -p 3001:3001 --name nginx-docker-demo-container nginx-docker-demo"
   },
   "eslintConfig": {
     "extends": [
